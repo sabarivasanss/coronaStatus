@@ -1,0 +1,41 @@
+<div [ngClass]="{'container': !darkMode,
+'container-dark': darkMode}">
+<div class="row">
+    <div class="col-md-6">
+        <div class="dropdown">
+            <select class="custom-select" (change)="changeCity($event)" >
+                <option *ngFor="let country of countryList" [ngValue]="country">{{country}}</option>
+             </select>
+          </div>
+    </div>
+    <div class="col-md-6">
+        <div class="dropdown">
+            <select class="custom-select" (change)="ChangeStatus($event)" >
+                <option *ngFor="let status of StatusList" [ngValue]="status">{{status}}</option>
+             </select>
+          </div>
+    </div>
+</div>
+<div class="lineGraph" *ngIf="!darkMode">
+<google-chart 
+   [title]="title"
+   [type]="type"
+   [data]="lineChartData"
+   [options]="options"
+   [columnNames]="columnNames"
+   [width]=500
+   [height]=220>
+</google-chart>
+</div>
+<div class="container" *ngIf="darkMode">
+    <google-chart 
+       [title]="title"
+       [type]="type"
+       [data]="lineChartData"
+       [options]="options_dark"
+       [columnNames]="columnNames"
+       [width]=500
+       [height]=220>
+    </google-chart>
+    </div>
+</div>

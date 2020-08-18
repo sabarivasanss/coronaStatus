@@ -1,0 +1,40 @@
+.container{
+    padding-right: 0;
+    background-color: whitesmoke;
+  }
+  .container-dark{
+    padding-right: 0;
+    background-color: #05021c;;
+  }
+  .scroll {
+    height: 30vh;
+    width: 100%;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: serif;
+  }
+  .scroll-dark {
+    height: 30vh;
+    width: 100%;
+    background-color: #0c072e;;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: serif;
+    color:white
+  }
+  li{
+    list-style: none;
+  }
+  .countInfo{
+    height: 65px;
+    font-family: fantasysans-serif;
+  }
+  .countInfo-dark{
+    height: 65px;
+    font-family: fantasysans-serif;
+    color: white;
+  }
+  #title {
+      color: green;
+  }

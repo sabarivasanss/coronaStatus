@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "covid19report-aa79a",
+    "staging": "covid19statusreport",
+    "prod": "coronastatus-4437a"
+  }
+}

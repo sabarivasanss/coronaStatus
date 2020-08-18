@@ -1,0 +1,25 @@
+.container {
+    width: 100% ;
+    display: block;
+    position: relative;
+    padding-top: 10px;
+}
+.lineGraph{
+    padding-top: 10px;
+}
+.container-dark {
+    width: 100% ;
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    background-color: #05021c;
+}
+#chart {
+    display: inline-block;
+    position: relative;
+}
+.dropdown {
+    width: 200px;
+    font-family: fantasysans-serif;
+    background-color: gray;
+}

@@ -1,0 +1,23 @@
+<div class="container" id="outer">
+  <div class="row">
+    <div class="col-sm">
+      <div class="inner "><button type="submit" class="msgBtn" (click)="ChangeStatus('Confirmed')" >TOTAL</button></div>
+    </div>
+    <div class="col-sm">
+      <div class="inner"><button type="submit" class="msgBtn2" (click)="ChangeStatus('Recovered')">RECOVERED</button></div>
+    </div>
+    <div class="col-sm">
+      <div class="inner"><button class="msgBtn3" (click)="ChangeStatus('Deaths')">DEATHS</button></div>
+    </div>
+  </div>
+</div>
+<div class="mapView"  *ngIf="!darkMode">
+<google-chart  #chart [title]="title" [type]="type" [data]="statusReport" 
+[columns]="columnNames" [options]="options">
+</google-chart>
+</div>
+<div class="mapView" *ngIf= "darkMode">
+  <google-chart  #chart [title]="title" [type]="type" [data]="statusReport" 
+  [columns]="columnNames" [options]="options_dark">
+  </google-chart>
+  </div>

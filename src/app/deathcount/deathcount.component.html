@@ -1,0 +1,18 @@
+<div [ngClass]="service.toggleNightMode(container, darkMode)">
+<div [ngClass]="service.toggleNightMode(countInfo, darkMode)">
+    <tr id="title">Total Deaths</tr>
+    <tr><b>{{TotalDeath}}</b></tr> 
+</div>
+<div [ngClass]="service.toggleNightMode(scroll, darkMode)">
+        <li *ngFor="let hero of country">
+            <div class="row">
+                <div class="col-md-7">
+                    {{ hero.Country }}
+                </div>
+                <div class="col-md-5">
+                  <b>{{ hero.TotalDeaths}}</b>
+                </div>
+            </div>
+        </li>
+</div>
+</div>

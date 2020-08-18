@@ -1,0 +1,107 @@
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    html {
+        --bg: #FCFCFC;
+        --bg-panel: #EBEBEB;
+        --color-headings:#0077FF;
+        --color-text: #333333;
+    }
+    html[data-theme="dark"] {
+        --bg: black;
+        --bg-panel: black;
+        --color-headings:black;
+        --color-text: #black;
+    }
+    body{        
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background-color: var(--bg);
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background: #333;
+        padding: 10px 0;
+        color: #fff;
+        text-align: right;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }    
+    /* Some more styles to beutify this example */
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 25px;
+        display: inline-block;
+    }
+    .col-sm-3 {
+        height: 80vh;
+    }
+    .col-sm-5 {
+        height: 80vh;
+    }
+    .lineChartContainer {
+        background-color: whitesmoke;
+        height: 84vh;
+    }
+    .lineChartContainer-dark {
+        background-color: #05021c;
+        height: 84vh;
+    }
+    .dashboard {
+       /* background-color: grey; */
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    /* .padding-0{
+    padding-right:0;
+    padding-left:0;
+    }*/
+    .padding-5{
+    padding-left:15px;
+    } 
+    .padding-5-dark {
+        padding-left:15px;
+        background-color:#0c072e;
+        } 
+    #spantag {
+        color: red;
+    }
+    body-light{
+        background: white;
+    }
+    .body-dark{
+        background: #0c072e;
+    }
+    .deathContainer{
+        padding-right: 0;
+        background: whitesmoke;
+    }
+    .deathContainer-dark{
+        padding-right: 0;
+        background: #05021c;
+    }
+    .recoverdContainer {
+        background: whitesmoke;
+    }
+    .recoverdContainer-dark {
+        background: #05021c;
+    }
+    @media screen and (max-width: 600px) {
+        .lineChart {
+          visibility: hidden;
+          clear: both;
+          float: left;
+          margin: 10px auto 5px 20px;
+          width: 28%;
+          display: none;
+        }
+      }

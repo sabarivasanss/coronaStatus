@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body [ngClass]= "service.toggleNightMode(body, darkMode)">
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" (click)="toggle()" id="customSwitches">
+                    <label class="custom-control-label" for="customSwitches">Night Mode</label>
+                  </div>
+            </nav>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="row">
+            <div class="col-sm-3 padding-0">
+                <app-country-list [darkMode]="darkMode"></app-country-list>
+            </div>
+            <div class="col-sm-5 padding-0">
+                <app-mapview [darkMode]="darkMode"></app-mapview> 
+            </div>
+            <div class="col-sm-4" [ngClass]= "service.toggleNightMode(lineChartContainer, darkMode)">
+                <div class="row">
+                    <div  class="col-md-6" [ngClass]= "service.toggleNightMode(deathContainer, darkMode)">
+                       <app-deathcount [darkMode]="darkMode"></app-deathcount>
+                    </div>
+                    <div class="col-md-6" [ngClass]= "service.toggleNightMode(recoverdContainer, darkMode)">
+                        <app-recovercount [darkMode]="darkMode"></app-recovercount>
+                    </div>
+                </div>
+                <div class="lineChart">
+                <div style="background-color: whitesmoke;">
+                    <app-line-chart [darkMode]="darkMode"></app-line-chart>
+                </div>
+            </div>
+            </div>
+          </div>
+    </div>    
+     <div class="fixed-footer">
+        <div class="container"></div>        
+    </div> 
+</body>
+</html>

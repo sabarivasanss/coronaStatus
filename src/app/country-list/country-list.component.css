@@ -1,0 +1,36 @@
+.scroll-dark {
+    height: 90vh;
+    width: 100%;
+    background-color: #0c072e;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: serif;
+    color: white;
+}
+.container-dark{
+    padding-left: 15px;
+    background-color: #05021c;
+  }
+.container{
+    background-color: whitesmoke;
+  }
+  .scroll {
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: serif;
+  }
+  .countInfo{
+    height: 65px;
+    font-family: fantasysans-serif;
+  }
+  .countInfo-dark{
+    height: 65px;
+    font-family: fantasysans-serif;
+    color: white;
+  }
+  li{
+    list-style: none;
+  }
