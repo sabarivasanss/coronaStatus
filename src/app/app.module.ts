@@ -13,7 +13,6 @@ import { DeathcountComponent } from './deathcount/deathcount.component';
 import { RecovercountComponent } from './recovercount/recovercount.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { LineChartComponent } from './line-chart/line-chart.component';
-import { LoginComponent } from './login/login.component';
  
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { LoginComponent } from './login/login.component';
     DeathcountComponent,
     RecovercountComponent,
     LineChartComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
