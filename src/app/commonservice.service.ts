@@ -13,7 +13,6 @@ export class CommonserviceService {
 
   ChangeCountry = false;
 
-  loggedIn = false;
   
   staticsReport: Subject<Object> = new Subject();
 
@@ -21,7 +20,6 @@ export class CommonserviceService {
 
   constructor(private http: HttpClient) {
     console.log("inside the service");
-    // if(this.loggedIn) {
       this.http.get('https://api.covid19api.com/summary').subscribe(data => {
         this.staticsReport.next(data);
     });
@@ -33,15 +31,6 @@ export class CommonserviceService {
     
   }
 
-
-  countryList;
-  checkLogin(username, password) {
-    if(username === password) {
-      return true;
-    } else {
-      return false;
-    }
-  }
 
   toggleNightMode(className, darkMode) {
     if(!darkMode) {
